@@ -21,7 +21,9 @@
 <%if @shops.any?() %>
 <ul>
   <%@shops.each do |shop|%>
-  <li><%= shop.name%></li>
+  <a href="/shop/<%= shop.id%>">
+    <li><%= shop.name%></li>
+  </a>
   <%end%>
 </ul>
 <% else %>
