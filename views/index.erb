@@ -35,7 +35,9 @@
   <%if @shoes.any?() %>
   <ul>
     <%@shoes.each do |shoe|%>
-    <li><%= shoe.name%></li>
+  <a href="/shoe/ <%= shoe.id %>">
+      <li><%= shoe.name%></li>
+  </a>
     <%end%>
   </ul>
   <%else%>
