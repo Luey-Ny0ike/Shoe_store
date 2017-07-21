@@ -13,3 +13,28 @@
   <input type="text" name="name" placeholder="eg Yeezy">
   <button type="submit" name="button">Add</button>
 </form>
+
+<hr>
+
+<h2>Listed stores</h2>
+<%if @stores.any?() %>
+<ul>
+  <%@stores.each do |store|%>
+  <li><%= store.name%></li>
+  <%end%>
+</ul>
+<% else %>
+<p>No stores in the system yet</p>
+<% end %>
+
+<h3>Available Shoe brands</h3>
+<ul>
+  <%if @shoes.any?() %>
+  <ul>
+    <%@shoes.each do |shoe|%>
+    <li><%= shoe.name%></li>
+    <%end%>
+  </ul>
+  <%else%>
+  <p>No shoes available</p>
+  <%end%>
