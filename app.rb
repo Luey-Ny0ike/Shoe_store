@@ -21,3 +21,9 @@ post '/index/shoe/new' do
   Shoe.create(name: @shoe_name)
   redirect '/'
 end
+
+get '/shop/:id' do
+  @shop_name = Shop.find(params.fetch('id').to_i)
+  @shops = Shop.all
+  erb :shop
+end
