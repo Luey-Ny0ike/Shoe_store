@@ -1,8 +1,8 @@
 <h2>Home</h2>
 
-<h3>Add a shoe store</h3>
+<h3>Add a shoe shop</h3>
 <form class="" action="index.html" method="post">
-  <label for="name">Store Name</label>
+  <label for="name">Shop Name</label>
   <input type="text" name="name" placeholder="eg classic">
   <button type="submit" name="button">Add</button>
 </form>
@@ -16,15 +16,15 @@
 
 <hr>
 
-<h2>Listed stores</h2>
-<%if @stores.any?() %>
+<h2>Listed shops</h2>
+<%if @shops.any?() %>
 <ul>
-  <%@stores.each do |store|%>
-  <li><%= store.name%></li>
+  <%@shops.each do |shop|%>
+  <li><%= shop.name%></li>
   <%end%>
 </ul>
 <% else %>
-<p>No stores in the system yet</p>
+<p>No shops in the system yet</p>
 <% end %>
 
 <h3>Available Shoe brands</h3>
