@@ -27,3 +27,9 @@ get '/shop/:id' do
   @shops = Shop.all
   erb :shop
 end
+
+get '/shoe/:id' do
+  @shoe_brand = Shoe.find(params.fetch('id').to_i)
+  @shoes = Shoe.all
+  erb :shoe
+end
